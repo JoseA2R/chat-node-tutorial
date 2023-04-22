@@ -22,6 +22,8 @@ jobs:
       - image: cimg/node:20.0.0
     steps:
       - checkout
+      - node/install-packages:
+          pkg-manager: npm
       - run:
           command: node server.js
           name: Build app
