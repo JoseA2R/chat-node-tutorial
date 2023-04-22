@@ -22,9 +22,7 @@ jobs:
       - image: cimg/node:20.0.0
     steps:
       - checkout
-      - run: sudo npm install -g npm@latest
-      - node/install-packages:
-          pkg-manager: npm
+      - node/install-packages
       - run:
           command: node server.js
           name: Build app
