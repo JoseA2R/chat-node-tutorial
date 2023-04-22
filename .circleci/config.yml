@@ -20,11 +20,8 @@ jobs:
               npm install
               npm install express --save-dev
               node server.js
-      - run:
-          name: "Run Test"
-          command: |-
-              npm install
               npm test
+              
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
